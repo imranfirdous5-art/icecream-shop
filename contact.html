@@ -1,45 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <!-- stylesheet-css -->
-     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
 
+    <!-- bootstrap-css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+  </head>
+  <body>
     <div class="bg">
-    <div class="story">
+      <div class="story">
         <div class="headng-algn">
-            <h1>contact us</h1>
-            <button onclick="back(event)">back</button>
+          <h1>contact us</h1>
+          <button onclick="back(event)" class="circle"><i class="fa-solid fa-arrow-left"></i></button>
         </div>
-        
+
         <div class="container">
-            <form action="" onsubmit="messagesubmit(event)">
-                <div>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" placeholder="enter name here..." class="message-input">
-                </div> <br>
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" placeholder="enter email here..." class="message-input">
-                </div> <br>
-                <div>
-                    <label for="message">Message:</label><br>
-                    <!-- <input type="text" id="name" placeholder="enter name here..."> -->
-                     <textarea name="message" id="message" placeholder="enter message here..." class="message-input"></textarea>
-                </div>
-                <button type="submit">submit</button>
-            </form>
-            
+          <form action="https://formspree.io/f/xyeyglao" method="post">
+            <div>
+              <label for="name">Name:</label><br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="enter name here..."
+                class="message-input"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="email">Email:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="enter email here..."
+                class="message-input"
+              />
+            </div>
+            <br />
+            <div>
+              <label for="message">Message:</label><br />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="enter message here..."
+                class="message-input"
+              ></textarea>
+            </div>
+            <button type="submit">submit</button>
+          </form>
         </div>
-    
-    </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
