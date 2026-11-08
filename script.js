@@ -35,7 +35,26 @@ function signup(e){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    
+    const newUser = {name, email, password};
+
+    const usersList = JSON.parse(localStorage.getItem('allUsers')) || [];
+
+    const existingUser = usersList.find(user => user.email === email);
+    if(existingUser){
+        alert('user already exist');
+        return;
+    }
+
+    usersList.push(newUser);
+
+    localStorage.setItem('allUsers', JSON.stringify(usersList));
+
+    alert('signup successfully');
+    e.target.reset();
+
+    window.location.href = 'dashboard.html'
+
+
 }
 
 
